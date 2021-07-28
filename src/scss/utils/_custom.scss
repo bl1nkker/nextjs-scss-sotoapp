@@ -1,0 +1,72 @@
+.carousel {
+  height: 100%;
+  &-inner {
+    height: 100%;
+  }
+  .carousel-item {
+    position: relative;
+    background-image: linear-gradient(
+      60deg,
+      rgb(7, 7, 7) 30%,
+      rgb(255, 123, 0)
+    );
+    background-size: cover;
+    height: 100%;
+    img {
+      position: absolute;
+      width: 40%;
+      height: 100%;
+      filter: opacity(75%);
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+    &:nth-child(3n + 1) {
+      background-image: linear-gradient(
+        60deg,
+        rgb(252, 204, 47) 30%,
+        rgb(7, 7, 7)
+      );
+      img {
+        left: 10px;
+      }
+    }
+    &:nth-child(3n + 2) {
+      background-image: linear-gradient(
+        60deg,
+        rgb(7, 7, 7) 30%,
+        rgb(0, 162, 255)
+      );
+      img {
+        right: 10px;
+      }
+    }
+    &:nth-child(3n + 3) {
+      background-image: linear-gradient(
+        60deg,
+        rgb(102, 255, 0) 30%,
+        rgb(7, 7, 7)
+      );
+      img {
+        left: 10px;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    @include flex-box(column, space-between, center);
+    right: 12px;
+    left: auto;
+    margin: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    button {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transition: 0.3s ease-in-out;
+      &.active {
+        background-color: rgb(67, 186, 255);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "utils/config";
+@import "utils/mixins";
+@import "utils/animations";
+@import "utils/custom";
+
+@import "home";
+@import "navbar";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// img {
+//   width: 240px;
+// }
+
+.app {
+  background-color: $bg-color;
+  height: 100vh;
+  width: 100vw;
+  color: $light-color;
+}
+
+.content {
+  margin-top: 2em;
+  height: 89vh;
+}

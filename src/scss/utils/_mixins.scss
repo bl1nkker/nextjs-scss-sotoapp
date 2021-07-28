@@ -1,0 +1,44 @@
+@mixin flex-box($direction, $jc, $ai){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin card-background($color){
+    background-color: change-color($color: $color, $alpha: 0.3);
+    transition: 300ms ease-in-out;
+    &:hover{
+        background-color: change-color($color: $color, $alpha: 0.9);
+        transform: scale(1.05);
+        img, button,h3, p{opacity: 1;}
+    }
+}
+
+@mixin button-primary($color, $font-color){
+    background-color: $color;
+    color: $font-color;
+    border-radius: 20px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    &:hover{
+        // transform: scale(1.1);
+        background-color: $primary-yellow;
+    }
+}
+
+@mixin button-secondary($color, $font-color){
+    background-color: transparent;
+    color: $font-color;
+    border: 1px solid $color;
+    border-radius: 20px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    &:hover{
+        // transform: scale(1.1);
+        background-color: $primary-yellow;
+        border: none;
+    }
+}
