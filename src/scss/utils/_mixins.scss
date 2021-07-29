@@ -1,44 +1,74 @@
-@mixin flex-box($direction, $jc, $ai){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $jc;
-    align-items: $ai;
+@mixin flex-box($direction, $jc, $ai) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
 }
 
-@mixin card-background($color){
-    background-color: change-color($color: $color, $alpha: 0.3);
-    transition: 300ms ease-in-out;
-    &:hover{
-        background-color: change-color($color: $color, $alpha: 0.9);
-        transform: scale(1.05);
-        img, button,h3, p{opacity: 1;}
+@mixin card-background($color) {
+  background-color: change-color($color: $color, $alpha: 0.3);
+  transition: 300ms ease-in-out;
+  &:hover {
+    background-color: change-color($color: $color, $alpha: 0.9);
+    transform: scale(1.05);
+    img,
+    button,
+    h3,
+    p {
+      opacity: 1;
     }
+  }
 }
 
-@mixin button-primary($color, $font-color){
-    background-color: $color;
-    color: $font-color;
-    border-radius: 20px;
-    font-weight: 200;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-    &:hover{
-        // transform: scale(1.1);
-        background-color: $primary-yellow;
-    }
+@mixin home-post-left($color) {
+  background-position: left;
+  .carousel-caption {
+    left: auto;
+    right: 0;
+    border-left: 100px solid transparent;
+    border-bottom: 600px solid $color;
+  }
+  &::after {
+    background-image: linear-gradient(60deg, $color 30%, rgb(7, 7, 7));
+  }
+}
+@mixin home-post-right($color) {
+  background-position: right;
+  .carousel-caption {
+    left: 0;
+    right: auto;
+    border-right: 100px solid transparent;
+    border-bottom: 600px solid $color;
+  }
+  &::after {
+    background-image: linear-gradient(60deg, rgb(7, 7, 7) 30%, $color);
+  }
 }
 
-@mixin button-secondary($color, $font-color){
-    background-color: transparent;
-    color: $font-color;
-    border: 1px solid $color;
-    border-radius: 20px;
-    font-weight: 200;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-    &:hover{
-        // transform: scale(1.1);
-        background-color: $primary-yellow;
-        border: none;
-    }
+@mixin button-primary($color, $font-color) {
+  background-color: $color;
+  color: $font-color;
+  border-radius: 20px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    // transform: scale(1.1);
+    background-color: $primary-yellow;
+  }
+}
+
+@mixin button-secondary($color, $font-color) {
+  background-color: transparent;
+  color: $font-color;
+  border: 1px solid $color;
+  border-radius: 20px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    // transform: scale(1.1);
+    background-color: $primary-yellow;
+    border: none;
+  }
 }

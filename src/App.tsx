@@ -16,7 +16,7 @@ function App() {
         <Route path="/about" exact component={About} />
         <Route path="/contacts" exact component={Contacts} />
       </Switch>
-      {/* <OnlineHelpers /> */}
+      <OnlineHelpers />
     </div>
   );
 }

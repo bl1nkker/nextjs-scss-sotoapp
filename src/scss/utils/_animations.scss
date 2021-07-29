@@ -1,8 +1,8 @@
 @keyframes home-text-anim {
   0% {
-    color: white;
+    transform: scale(0.1);
   }
   100% {
-    color: blue;
+    transform: scale(1);
   }
 }

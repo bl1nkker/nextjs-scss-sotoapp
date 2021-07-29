@@ -1,0 +1,25 @@
+.helpers {
+  @include flex-box(row, space-between, center);
+  position: fixed;
+  width: 95%;
+  top: 90%;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 9999;
+  .whatsapp {
+    button {
+      color: greenyellow;
+    }
+  }
+  .telegram {
+    button {
+      color: rgb(25, 87, 255);
+    }
+  }
+  button {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
