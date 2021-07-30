@@ -4,5 +4,10 @@
         "home":"Home",
         "about":"About",
         "contacts":"Contacts"
+    },
+    "about_page":{
+        "created_by_pref":"Created by",
+        "source_code_pref":"Source code",
+        "other_proj_pref":"Other projects"
     }
 }

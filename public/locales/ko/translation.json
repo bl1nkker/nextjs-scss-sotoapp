@@ -4,5 +4,10 @@
         "home":"홈페이지",
         "about":"회사 소개",
         "contacts":"콘택트 렌즈"
+    },
+    "about_page":{
+        "created_by_pref":"프로젝트 작성자",
+        "source_code_pref":"원천",
+        "other_proj_pref":"기타 프로젝트"
     }
 }

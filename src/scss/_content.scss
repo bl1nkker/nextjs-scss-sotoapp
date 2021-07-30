@@ -1,0 +1,153 @@
+@include directional-animation-mixin(vertical-p, top, 1000%, 40%);
+@include directional-animation-mixin(vertical-h3, top, -1000%, 30%);
+@include complex-directional-animation-mixin(vertical-about, top, 0, 10%, -10%);
+@include directional-animation-mixin(horizontal-p, right, -1000%, 50%);
+@include directional-animation-mixin(horizontal-h3, right, 1000%, 50%);
+
+.carousel {
+  height: 100%;
+  &-inner {
+    height: 100%;
+  }
+  .carousel-item {
+    position: relative;
+    // Background Image
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+  }
+
+  &.about__carousel {
+    .carousel-item {
+      // Linear Gradient (mixin)
+      @include about-center($home-post-color-1);
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+      .carousel-caption {
+        animation: vertical-about 10s ease-in-out infinite;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+  // Home carousel
+  &.home__carousel {
+    .carousel-item {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+      .carousel-caption {
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        // If not active
+        .content {
+          opacity: 0;
+        }
+      }
+      &:nth-child(3n + 1) {
+        @include home-post-left($home-post-color-1);
+        h3 {
+          animation: vertical-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: vertical-p $animation-duration ease-in-out;
+        }
+      }
+      &:nth-child(3n + 2) {
+        @include home-post-right($home-post-color-2);
+        h3 {
+          animation: horizontal-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: horizontal-p $animation-duration ease-in-out;
+        }
+      }
+      &:nth-child(3n + 3) {
+        @include home-post-left($home-post-color-3);
+        h3 {
+          animation: horizontal-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: vertical-p $animation-duration ease-in-out;
+        }
+      }
+    }
+  }
+  .active {
+    .carousel-caption {
+      .content {
+        position: relative;
+        width: 80%;
+        opacity: 1 !important;
+        h3,
+        h1,
+        .paragraphs {
+          position: absolute;
+          right: 50%;
+          transform: translateX(60%);
+          width: 100%;
+        }
+        h1 {
+          top: 20%;
+          font-size: $font-app-name;
+          color: change-color($color: $home-post-color-1, $alpha: 1);
+        }
+        h3 {
+          top: 30%;
+          font-size: $font-home-h3;
+        }
+        .paragraphs {
+          p {
+            font-size: $font-home-p;
+          }
+          top: 40%;
+
+          a {
+            font-size: $font-home-p;
+            color: rgb(213, 47, 255);
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-indicators {
+    @include flex-box(column, space-between, center);
+    right: 12px;
+    left: auto;
+    margin: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      transition: 0.3s ease-in-out;
+      &.active {
+        background-color: rgb(67, 186, 255);
+      }
+    }
+  }
+}

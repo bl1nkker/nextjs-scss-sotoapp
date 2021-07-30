@@ -18,18 +18,22 @@ export const HomeCarousel: React.FC<Props> = ({ listOfPosts }) => {
       controls={false}
       onSlide={(slideIndex) => handleOnSlide(slideIndex)}
       fade
+      pause={false}
+      className="home__carousel"
     >
       {listOfPosts.map((post) => (
         <Carousel.Item
           key={post.id}
-          interval={5000}
+          interval={5000000}
           style={{ backgroundImage: `url(${post.image})` }}
         >
           {/* <img alt="post" src={post.image} /> */}
           <Carousel.Caption>
             <div className="content">
               <h3>{post.title}</h3>
-              <p>{post.description}</p>
+              <div className="paragraphs">
+                <p>{post.description}</p>
+              </div>
             </div>
           </Carousel.Caption>
         </Carousel.Item>

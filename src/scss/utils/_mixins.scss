@@ -33,13 +33,50 @@
   }
 }
 
-@mixin vertical-animation-mixin($name, $direction, $from, $to) {
+@mixin about-center($color) {
+  background-position: right;
+  .carousel-caption {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  &::after {
+    background-color: rgba(250, 98, 98, 0.322);
+  }
+}
+
+@mixin directional-animation-mixin($name, $direction, $from, $to) {
   @keyframes #{$name} {
     0% {
       #{$direction}: $from;
     }
     100% {
       #{$direction}: $to;
+    }
+  }
+}
+@mixin complex-directional-animation-mixin(
+  $name,
+  $direction,
+  $start,
+  $middle,
+  $end
+) {
+  @keyframes #{$name} {
+    0% {
+      #{$direction}: $middle;
+    }
+    25% {
+      #{$direction}: $end;
+    }
+    50% {
+      #{$direction}: $middle;
+    }
+    75% {
+      #{$direction}: $end;
+    }
+    100% {
+      #{$direction}: $middle;
     }
   }
 }

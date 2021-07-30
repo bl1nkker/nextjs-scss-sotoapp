@@ -4,5 +4,10 @@
         "home":"Домой",
         "about":"О нас",
         "contacts":"Контакты"
+    },
+    "about_page":{
+        "created_by_pref":"Проект создан",
+        "source_code_pref":"Исходный код",
+        "other_proj_pref":"Другие проекты"
     }
 }

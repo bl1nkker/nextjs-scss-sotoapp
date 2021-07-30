@@ -3,9 +3,10 @@
 @import "utils/animations";
 @import "utils/custom";
 
-@import "home";
+@import "content";
 @import "helpers";
 @import "navbar";
+@import "about";
 
 * {
   margin: 0;
@@ -30,4 +31,7 @@
 button {
   background-color: transparent;
   border: none;
+}
+a {
+  text-decoration: none !important;
 }
