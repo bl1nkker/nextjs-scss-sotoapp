@@ -1,0 +1,8 @@
+{
+    "app_name":"Soto",
+    "link_names":{
+        "home":"Home",
+        "about":"About",
+        "contacts":"Contacts"
+    }
+}

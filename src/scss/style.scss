@@ -10,11 +10,9 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: $font-stack;
+  font-size: 62.5%;
 }
-
-// img {
-//   width: 240px;
-// }
 
 .app {
   background-color: $bg-color;
@@ -26,7 +24,7 @@
 
 .content {
   margin-top: 2em;
-  height: 90vh;
+  height: 95vh;
 }
 
 button {

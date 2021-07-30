@@ -9,12 +9,12 @@ export const OnlineHelpers = (props: Props) => {
     <div className="helpers">
       <div className="whatsapp">
         <button>
-          <WhatsAppIcon style={{ fontSize: "2.5rem" }} />
+          <WhatsAppIcon style={{ fontSize: "3.6rem" }} />
         </button>
       </div>
       <div className="telegram">
         <button>
-          <TelegramIcon style={{ fontSize: "2.5rem" }} />
+          <TelegramIcon style={{ fontSize: "3.6rem" }} />
         </button>
       </div>
     </div>

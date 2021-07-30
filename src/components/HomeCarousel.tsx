@@ -22,7 +22,7 @@ export const HomeCarousel: React.FC<Props> = ({ listOfPosts }) => {
       {listOfPosts.map((post) => (
         <Carousel.Item
           key={post.id}
-          interval={20000}
+          interval={5000}
           style={{ backgroundImage: `url(${post.image})` }}
         >
           {/* <img alt="post" src={post.image} /> */}
