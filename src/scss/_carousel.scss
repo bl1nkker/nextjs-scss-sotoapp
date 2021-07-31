@@ -1,6 +1,6 @@
-@include directional-animation-mixin(vertical-p, top, 1000%, 40%);
-@include directional-animation-mixin(vertical-h3, top, -1000%, 30%);
-@include complex-directional-animation-mixin(vertical-about, top, 0, 3%, -3%);
+@include directional-animation-mixin(vertical-p, top, 1000%, 30%);
+@include directional-animation-mixin(vertical-h3, top, -1000%, 20%);
+@include complex-directional-animation-mixin(vertical-about, top, 0, 20%, 0%);
 @include directional-animation-mixin(horizontal-p, right, -1000%, 50%);
 @include directional-animation-mixin(horizontal-h3, right, 1000%, 50%);
 
@@ -34,7 +34,7 @@
         background-position: right bottom;
       }
       .carousel-caption {
-        animation: vertical-about 10s ease-in-out infinite;
+        animation: vertical-about 20s ease-in-out infinite;
         width: 50%;
         top: 0;
         bottom: 0;
@@ -146,12 +146,12 @@
           width: 100%;
         }
         h1 {
-          top: 20%;
+          top: 10%;
           font-size: $font-app-name;
           color: change-color($color: $home-post-color-1, $alpha: 1);
         }
         h3 {
-          top: 30%;
+          top: 20%;
           font-weight: 900;
           font-size: $font-home-h3;
         }
@@ -160,7 +160,7 @@
             font-weight: 400;
             font-size: $font-home-p;
           }
-          top: 40%;
+          top: 30%;
 
           a {
             font-size: $font-home-p;
