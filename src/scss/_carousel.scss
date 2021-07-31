@@ -1,6 +1,6 @@
 @include directional-animation-mixin(vertical-p, top, 1000%, 40%);
 @include directional-animation-mixin(vertical-h3, top, -1000%, 30%);
-@include complex-directional-animation-mixin(vertical-about, top, 0, 10%, -10%);
+@include complex-directional-animation-mixin(vertical-about, top, 0, 3%, -3%);
 @include directional-animation-mixin(horizontal-p, right, -1000%, 50%);
 @include directional-animation-mixin(horizontal-h3, right, 1000%, 50%);
 
@@ -66,7 +66,7 @@
           opacity: 0;
         }
       }
-      &:nth-child(3n + 1) {
+      &:nth-child(7n + 1) {
         @include home-post-left($home-post-color-1);
         h3 {
           animation: vertical-h3 $animation-duration ease-in-out;
@@ -75,7 +75,7 @@
           animation: vertical-p $animation-duration ease-in-out;
         }
       }
-      &:nth-child(3n + 2) {
+      &:nth-child(7n + 2) {
         @include home-post-right($home-post-color-2);
         h3 {
           animation: horizontal-h3 $animation-duration ease-in-out;
@@ -84,8 +84,44 @@
           animation: horizontal-p $animation-duration ease-in-out;
         }
       }
-      &:nth-child(3n + 3) {
+      &:nth-child(7n + 3) {
         @include home-post-left($home-post-color-3);
+        h3 {
+          animation: horizontal-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: vertical-p $animation-duration ease-in-out;
+        }
+      }
+      &:nth-child(7n + 4) {
+        @include home-post-right($home-post-color-4);
+        h3 {
+          animation: vertical-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: vertical-p $animation-duration ease-in-out;
+        }
+      }
+      &:nth-child(7n + 5) {
+        @include home-post-left($home-post-color-5);
+        h3 {
+          animation: horizontal-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: horizontal-p $animation-duration ease-in-out;
+        }
+      }
+      &:nth-child(7n + 6) {
+        @include home-post-right($home-post-color-6);
+        h3 {
+          animation: horizontal-h3 $animation-duration ease-in-out;
+        }
+        .paragraphs {
+          animation: vertical-p $animation-duration ease-in-out;
+        }
+      }
+      &:nth-child(7n + 7) {
+        @include home-post-left($home-post-color-7);
         h3 {
           animation: horizontal-h3 $animation-duration ease-in-out;
         }

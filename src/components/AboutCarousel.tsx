@@ -24,13 +24,16 @@ export const AboutCarousel: React.FC<Props> = ({}) => {
           style={{ backgroundImage: `url(${image})` }}
         >
           <Carousel.Caption>
-            <div className="content">
+            <div className={`content lang__${i18n.language}`}>
               <h1>{t("app_name")}</h1>
               <h3>{t("about_page.created_by_pref")}: bl1nk-</h3>
               <div className="paragraphs">
                 <p>
                   {t("about_page.source_code_pref")}:{" "}
-                  <a href="https://github.com/bl1nkker/vtl-app" target="_blank">
+                  <a
+                    href="https://github.com/bl1nkker/soto-app"
+                    target="_blank"
+                  >
                     "Soto" source code
                   </a>
                 </p>

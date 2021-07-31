@@ -9,5 +9,11 @@
         "created_by_pref":"Created by",
         "source_code_pref":"Source code",
         "other_proj_pref":"Other projects"
+    },
+    "contacts_page":{
+        "placeholder_name":"Your name",
+        "placeholder_email":"Your email",
+        "placeholder_number":"Phone number",
+        "send_button":"Send!"
     }
 }

@@ -32,6 +32,18 @@
     background-image: linear-gradient(60deg, $color 30%, rgb(7, 7, 7));
   }
 }
+@mixin home-post-right($color) {
+  background-position: right;
+  .carousel-caption {
+    left: 0;
+    right: auto;
+    border-right: 100px solid transparent;
+    border-bottom: 600px solid $color;
+  }
+  &::after {
+    background-image: linear-gradient(60deg, rgb(7, 7, 7) 30%, $color);
+  }
+}
 
 @mixin about-center($color) {
   background-position: right;
@@ -52,6 +64,19 @@
     }
     100% {
       #{$direction}: $to;
+    }
+  }
+}
+@mixin opacity-animation-mixin($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      opacity: $from;
+    }
+    50% {
+      opacity: $to;
+    }
+    100% {
+      opacity: $from;
     }
   }
 }
@@ -78,19 +103,6 @@
     100% {
       #{$direction}: $middle;
     }
-  }
-}
-
-@mixin home-post-right($color) {
-  background-position: right;
-  .carousel-caption {
-    left: 0;
-    right: auto;
-    border-right: 100px solid transparent;
-    border-bottom: 600px solid $color;
-  }
-  &::after {
-    background-image: linear-gradient(60deg, rgb(7, 7, 7) 30%, $color);
   }
 }
 

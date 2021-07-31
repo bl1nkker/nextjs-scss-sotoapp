@@ -1,0 +1,106 @@
+@include opacity-animation-mixin(contact-form-icon, 1, 0.1);
+@include directional-animation-mixin(contact-form-form, opacity, 0, 1);
+.contacts {
+  &-background {
+    position: relative;
+    background-image: url("https://www.xtrafondos.com/wallpapers/resoluciones/19/shinobu-kocho-de-kimetsu-no-yaiba_2560x1440_3715.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-color: $contacts-color;
+    }
+  }
+  &-form {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 22;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-right: 80px solid transparent;
+      border-bottom: 600px solid $contacts-form-bg;
+    }
+    transition: 0.3s ease-in-out;
+    &-hover__icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      animation: contact-form-icon 3s ease-in-out infinite;
+      color: $contacts-icon-color;
+    }
+    &-form__container {
+      display: none;
+    }
+    &:hover {
+      width: 50%;
+      .contacts-form-hover__icon {
+        display: none;
+      }
+      .contacts-form-form__container {
+        @include flex-box(column, center, center);
+        height: 100%;
+        width: 100%;
+
+        animation: contact-form-form 1s ease-in-out;
+        section {
+          position: relative;
+          width: 40%;
+          input {
+            width: 100%;
+            font-size: 2.4rem;
+            background-color: $contacts-form-input;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            margin-top: 1em;
+            transition: 0.3s ease-in-out;
+            color: white;
+            &:focus {
+              background-color: $contacts-form-input-focus;
+            }
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.685);
+            }
+          }
+          button {
+            position: relative;
+            margin-top: 1em;
+            border: 3px $contacts-form-input solid;
+            border-radius: 20px;
+            padding: 5px 1em;
+            color: black;
+            font-size: 2rem;
+            transition: 0.3s ease-in-out;
+            &:hover {
+              background-color: $contacts-form-input;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

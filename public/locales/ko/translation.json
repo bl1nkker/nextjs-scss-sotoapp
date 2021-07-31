@@ -9,5 +9,11 @@
         "created_by_pref":"프로젝트 작성자",
         "source_code_pref":"원천",
         "other_proj_pref":"기타 프로젝트"
+    },
+    "contacts_page":{
+        "placeholder_name":"당신의 이름",
+        "placeholder_email":"귀하의 이메일",
+        "placeholder_number":"전화 번호",
+        "send_button":"보내다!"
     }
 }

@@ -3,10 +3,10 @@
 @import "utils/animations";
 @import "utils/custom";
 
-@import "content";
+@import "carousel";
 @import "helpers";
 @import "navbar";
-@import "about";
+@import "contacts";
 
 * {
   margin: 0;
@@ -34,4 +34,38 @@ button {
 }
 a {
   text-decoration: none !important;
+}
+
+.lang__en {
+  h1,
+  h3,
+  p,
+  a,
+  label,
+  input,
+  button {
+    font-family: $font-stack-en !important;
+  }
+}
+.lang__ko {
+  h1,
+  h3,
+  p,
+  a,
+  label,
+  input,
+  button {
+    font-family: $font-stack-ko !important;
+  }
+}
+.lang__ru {
+  h1,
+  h3,
+  p,
+  a,
+  label,
+  input,
+  button {
+    font-family: $font-stack-ru !important;
+  }
 }
