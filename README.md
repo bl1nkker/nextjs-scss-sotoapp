@@ -5,4 +5,6 @@
 ---
 Supported languages:
 ***
-![English](https://image.flaticon.com/icons/png/512/197/197374.png)
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://image.flaticon.com/icons/png/512/197/197374.png)  |  ![](https://image.flaticon.com/icons/png/512/197/197374.png)
