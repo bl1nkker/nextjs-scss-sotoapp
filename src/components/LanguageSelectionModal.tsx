@@ -36,6 +36,15 @@ export const LanguageSelectionModal: React.FC<Props> = ({
           alt="ko-lang"
         />
       </button>
+      <button
+        className="language__button"
+        onClick={() => handleChangeLanguage("jp")}
+      >
+        <img
+          src="https://image.flaticon.com/icons/png/512/197/197604.png"
+          alt="jp-lang"
+        />
+      </button>
     </div>
   );
 };

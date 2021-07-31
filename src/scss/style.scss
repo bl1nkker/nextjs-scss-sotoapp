@@ -69,3 +69,14 @@ a {
     font-family: $font-stack-ru !important;
   }
 }
+.lang__jp {
+  h1,
+  h3,
+  p,
+  a,
+  label,
+  input,
+  button {
+    font-family: $font-stack-jp !important;
+  }
+}

@@ -47,7 +47,7 @@
     .language__modal {
       @include flex-box(row, space-between, center);
       background-color: rgba(255, 255, 255, 0.589);
-      width: calc(2.5rem * 3 + 30px);
+      width: calc(2.5rem * 4 + 30px);
       padding: 10px;
       border-radius: 20px;
       bottom: -200%;
@@ -79,5 +79,11 @@
   p,
   a {
     font-family: $font-stack-ru !important;
+  }
+}
+.jp {
+  p,
+  a {
+    font-family: $font-stack-jp !important;
   }
 }

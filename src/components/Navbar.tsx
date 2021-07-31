@@ -41,7 +41,10 @@ export const Navbar: React.FC<Props> = ({}) => {
                   ? "https://image.flaticon.com/icons/png/512/197/197408.png"
                   : i18n.language === "ko"
                   ? "https://image.flaticon.com/icons/png/512/197/197582.png"
-                  : "https://image.flaticon.com/icons/png/512/197/197374.png"
+                  : i18n.language === "jp"
+                  ? "https://image.flaticon.com/icons/png/512/197/197604.png"
+                  : // en
+                    "https://image.flaticon.com/icons/png/512/197/197374.png"
               }
               alt="lang-icon"
             />

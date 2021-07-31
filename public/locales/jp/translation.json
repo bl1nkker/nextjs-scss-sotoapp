@@ -1,19 +1,19 @@
 {
-    "app_name":"Сото",
+    "app_name":"連絡先",
     "link_names":{
-        "home":"Домой",
-        "about":"О нас",
-        "contacts":"Контакты"
+        "home":"ホームページ",
+        "about":"私たちに関しては",
+        "contacts":"連絡先"
     },
     "about_page":{
-        "created_by_pref":"Проект создан",
-        "source_code_pref":"Исходный код",
-        "other_proj_pref":"Другие проекты"
+        "created_by_pref":"クリエイタープロジェクト",
+        "source_code_pref":"ソース",
+        "other_proj_pref":"その他のプロジェクト"
     },
     "contacts_page":{
-        "placeholder_name":"Ваше имя",
-        "placeholder_email":"Электронная почта",
-        "placeholder_number":"Телефонный номер",
-        "send_button":"Отправить!"
+        "placeholder_name":"あなたの名前",
+        "placeholder_email":"Eメール",
+        "placeholder_number":"電話番号",
+        "send_button":"送信"
     }
 }
