@@ -1,4 +1,4 @@
 ---
 # Mutlilingual app
 ***
-[Мой сайт](https://sotoshi.netlify.app/)
+[Netlify link](https://sotoshi.netlify.app/)
