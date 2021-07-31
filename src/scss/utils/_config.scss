@@ -7,19 +7,21 @@
 // Jp font
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
 $bg-color: rgb(0, 0, 0);
 $light-color: rgb(255, 255, 255);
 
 $font-stack: "Dancing Script", cursive;
 
-$font-stack-en: "Dancing Script", cursive;
-$font-stack-ru: "Bad Script", cursive;
+$font-stack-en: "Caveat", cursive;
+$font-stack-ru: "Caveat", cursive;
 $font-stack-jp: "Noto Serif JP", serif;
 $font-stack-ko: "Nanum Myeongjo", serif;
 
 // Change font sizes on mobile devices
-$font-home-p: 2rem;
-$font-home-h3: 2.8rem;
+$font-home-p: 2.5rem;
+$font-home-h3: 3rem;
 $font-app-name: 4rem;
 $font-navbar-links: 3rem;
 

@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSelectionModal } from "./LanguageSelectionModal";
+import ru_icon from "./../data/imports/lang-icons/ru-icon.png";
+import en_icon from "./../data/imports/lang-icons/en-icon.png";
+import ko_icon from "./../data/imports/lang-icons/ko-icon.png";
+import jp_icon from "./../data/imports/lang-icons/jp-icon.png";
 
 interface Props {}
 
@@ -38,13 +42,13 @@ export const Navbar: React.FC<Props> = ({}) => {
             <img
               src={
                 i18n.language === "ru"
-                  ? "https://image.flaticon.com/icons/png/512/197/197408.png"
+                  ? ru_icon
                   : i18n.language === "ko"
-                  ? "https://image.flaticon.com/icons/png/512/197/197582.png"
+                  ? ko_icon
                   : i18n.language === "jp"
-                  ? "https://image.flaticon.com/icons/png/512/197/197604.png"
+                  ? jp_icon
                   : // en
-                    "https://image.flaticon.com/icons/png/512/197/197374.png"
+                    en_icon
               }
               alt="lang-icon"
             />
