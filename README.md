@@ -1,5 +1,5 @@
 ---
-# Mutlilingual app
+# Mutlilingual app ([i18next](https://react.i18next.com/getting-started))
 ---
 [Netlify link](https://sotoshi.netlify.app/)
 ---
