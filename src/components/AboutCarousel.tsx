@@ -5,7 +5,7 @@ import about_bg from "./../data/imports/anime-images/about_bg.jpg";
 
 interface Props {}
 
-export const AboutCarousel: React.FC<Props> = ({}) => {
+export const AboutCarousel: React.FC<Props> = () => {
   const { t, i18n } = useTranslation();
   return (
     <Carousel
@@ -28,13 +28,21 @@ export const AboutCarousel: React.FC<Props> = ({}) => {
             <div className="paragraphs">
               <p>
                 {t("about_page.source_code_pref")}:{" "}
-                <a href="https://github.com/bl1nkker/soto-app" target="_blank">
+                <a
+                  href="https://github.com/bl1nkker/soto-app"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   "Soto" source code
                 </a>
               </p>
               <p>
                 {t("about_page.other_proj_pref")}:{" "}
-                <a href="https://github.com/bl1nkker" target="_blank">
+                <a
+                  href="https://github.com/bl1nkker"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   GitHub profile
                 </a>
               </p>
