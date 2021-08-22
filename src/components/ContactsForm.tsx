@@ -1,6 +1,5 @@
 import React from "react";
 import TouchAppIcon from "@material-ui/icons/TouchApp";
-import SendIcon from "@material-ui/icons/Send";
 import { useTranslation } from "react-i18next";
 
 interface Props {}

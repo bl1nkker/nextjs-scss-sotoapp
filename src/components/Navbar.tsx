@@ -9,7 +9,7 @@ import jp_icon from "./../data/imports/lang-icons/jp-icon.png";
 
 interface Props {}
 
-export const Navbar: React.FC<Props> = ({}) => {
+export const Navbar: React.FC<Props> = () => {
   const { t, i18n } = useTranslation();
   const [openLangModal, setOpenLangModal] = useState<boolean>(false);
   const handleChangeLanguage = (lang: string) => {
