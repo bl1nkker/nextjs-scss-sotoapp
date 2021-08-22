@@ -37,7 +37,7 @@
       height: 100%;
       z-index: -1;
       border-right: 80px solid transparent;
-      border-bottom: 600px solid $contacts-form-bg;
+      border-bottom: 100vh solid $contacts-form-bg;
     }
     transition: 0.3s ease-in-out;
     &-hover__icon {
